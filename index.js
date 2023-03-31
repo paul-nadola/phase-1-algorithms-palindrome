@@ -1,27 +1,27 @@
 
-function isPalindrome(str) {
+function isPalindrome(word) {
   // Convert the string to lowercase and remove non-alphabetic characters
-  str = str.toLowerCase().replace(/[^a-z]/g, "");
+  word = word.toLowerCase().replace(/[^a-z]/g, "");
 
   // Reverse the string and compare it to the original string
-  return str === str.split("").reverse().join("");
+  return word === word.split("").reverse().join("");
 }
-/* SOLUTION 2 
-function isPalindrome(str) {
-  // Convert the string to lowercase
-  str = str.toLowerCase();
+// //  SOLUTION 2 
+// function isPalindrome(word) {
+//   // Convert the string to lowercase
+//   word = word.toLowerCase();
 
-  // Loop through the string and compare the first and last characters
-  for (let i = 0; i < Math.floor(str.length / 2); i++) {
-    if (str[i] !== str[str.length - 1 - i]) {
-      // If the characters don't match, the string is not a palindrome
-      return false;
-    }
-  }
+//   // Loop through the string and compare the first and last characters
+//   for (let i = 0; i < Math.floor(word.length / 2); i++) {
+//     if (word[i] !== word[word.length - 1 - i]) {
+//       // If the characters don't match, the string is not a palindrome
+//       return false;
+//     }
+//   }
 
-  // If all characters match, the string is a palindrome
-  return true;
-}*/
+//   // If all characters match, the string is a palindrome
+//   return true;
+// }
 
 
 /* 
