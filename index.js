@@ -1,4 +1,13 @@
-/*function isPalindrome(str) {
+
+function isPalindrome(str) {
+  // Convert the string to lowercase and remove non-alphabetic characters
+  str = str.toLowerCase().replace(/[^a-z]/g, "");
+
+  // Reverse the string and compare it to the original string
+  return str === str.split("").reverse().join("");
+}
+/* SOLUTION 2 
+function isPalindrome(str) {
   // Convert the string to lowercase
   str = str.toLowerCase();
 
@@ -13,18 +22,11 @@
   // If all characters match, the string is a palindrome
   return true;
 }*/
-function isPalindrome(str) {
-  // Convert the string to lowercase and remove non-alphabetic characters
-  str = str.toLowerCase().replace(/[^a-z]/g, "");
-
-  // Reverse the string and compare it to the original string
-  return str === str.split("").reverse().join("");
-}
-
 
 
 /* 
   Add your pseudocode here
+  Convert the string to lower case and remove special characters 
   if the string has the same letters going reading
   forward as reading backwards
   return string
@@ -33,6 +35,8 @@ function isPalindrome(str) {
 
 /*
   Add written explanation of your solution here
+  use .toLowerCase to convert it to lower case and then
+  remove special characters
   I will spilt the string then run the reverse function on it
   then join it
 */
